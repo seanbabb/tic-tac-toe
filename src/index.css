@@ -1,5 +1,8 @@
 body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+    font: 3rem "Century Gothic", Futura, sans-serif;
+    margin: 10px;
 }
 
+#root {
+    min-width: 500px;
+}
