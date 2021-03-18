@@ -4,7 +4,11 @@
 
 ## Description  
 
-An easy to play game of trying to get three " X " or three " O " straight together  in an up/down, left/right, or a diagnol line.  
+- An easy to play game that lets you play tic-tac-toe.  
+- Objective: to get three " X " or three " O " straight together  in an up/down, left/right, or a diagnol line. 
+- Displays when a player has won the game.  
+- Stores the game's history as the game progresses.  
+- Allows players to game history and see past moves.   
 
 ## Feedback  
 
