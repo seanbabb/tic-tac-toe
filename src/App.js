@@ -1,7 +1,35 @@
 import React, { Component } from 'react';
 import Board from './components/Board/Board';
-import './App.css';
+import styled from 'styled-components';
 import calculateWinner from './components/Helpers/Helpers';
+
+const GameApp = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+`;
+const GameInfo = styled.div`
+    background-color: #b3d9ff;
+    margin-left: 20px;
+`;
+const GameStatus = styled.div`
+    color: #bc2e1e;
+    font-size: 2.5rem;
+    margin: 10px;
+    text-shadow: 
+    0 1px 0px #378ab4, 1px 0 0px #5dabcd,
+    1px 2px 1px #378ab4, 2px 1px 1px #5dabcd,
+    2px 3px 2px #378ab4, 3px 2px 2px #5dabcd,
+    3px 4px 2px #378ab4, 4px 3px 3px #5dabcd,
+    4px 5px 3px #378ab4, 5px 4px 2px #5dabcd,
+    5px 6px 2px #378ab4, 6px 5px 2px #5dabcd,
+    6px 7px 1px #378ab4, 7px 6px 1px #5dabcd,
+    7px 8px 0px #378ab4, 8px 7px 0px #5dabcd,
+    2px 5px 5px #ce5937;
+`;
+const GameHistory = styled.ol`
+    padding: 50px;
+`;
 
 export class App extends Component {
     constructor(props) {
@@ -63,18 +91,18 @@ export class App extends Component {
         }
 
         return (
-            <div className="app">
+            <GameApp>
                 <div className="game-board">
                    <Board 
                         squares={current.squares}
                         onClick={(i) => this.handleClick(i)}
                    />
                 </div>
-                <div className="game-info">
-                    <div>{status }</div>
-                    <ol>{moves}</ol>
-                </div>
-            </div>
+                <GameInfo>
+                    <GameStatus>{status }</GameStatus>
+                    <GameHistory>{moves}</GameHistory>
+                </GameInfo>
+            </GameApp>
         )
     }
 }
