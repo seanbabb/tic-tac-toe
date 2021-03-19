@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Board from './components/Board/Board';
+import AppHeader from'./components/AppHeader/AppHeader';
 import styled from 'styled-components';
 import calculateWinner from './components/Helpers/Helpers';
 
 const GameApp = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    text-align: center;
 `;
 const GameInfo = styled.div`
     background-color: #b3d9ff;
@@ -92,6 +91,7 @@ export class App extends Component {
 
         return (
             <GameApp>
+                <AppHeader />
                 <div className="game-board">
                    <Board 
                         squares={current.squares}
