@@ -1,6 +1,6 @@
 # Tic-Tac-Toe  
 
-[View Demo](https://seanbabb.github.io/tic-tac-toe)  
+[View Demo](https://seanbabb.github.io/tic-tac-toe/)  
 
 ## Description  
 

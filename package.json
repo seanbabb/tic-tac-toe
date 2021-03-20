@@ -12,7 +12,7 @@
     "styled-components": "^5.2.1",
     "web-vitals": "^1.1.0"
   },
-  "homepage": "https://seanbabb.github.io/tic-tac-toe",
+  "homepage": "https://seanbabb.github.io/tic-tac-toe/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -38,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
