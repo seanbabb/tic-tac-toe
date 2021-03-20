@@ -5,12 +5,13 @@ const SquareButton = styled.button`
     background: #fff;
     color: red;
     float: left;
-    height: 50px;
-    width: 50px;
+    min-height: 20vh;
+    min-width: 125px;
     margin: -1px -1px 0 0;
-    padding: 0;
+    padding: 2px;
     border: 2px solid #db7093;
-    font-size: 4rem;
+    border-radius: 10px;
+    font-size: 8rem;
     font-weight: bold;
     line-height: .5;
     text-align: center;

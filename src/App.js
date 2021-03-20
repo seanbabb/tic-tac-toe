@@ -6,15 +6,24 @@ import calculateWinner from './components/Helpers/Helpers';
 
 const GameApp = styled.div`
     text-align: center;
+    background: #3057a4;
+`;
+const GameBoard = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    min-height: 30vh;
+    width: 100%;
 `;
 const GameInfo = styled.div`
-    background-color: #b3d9ff;
-    margin-left: 20px;
+    margin: 5px;
 `;
 const GameStatus = styled.div`
-    color: #bc2e1e;
+    color: #19004d;
     font-size: 2.5rem;
-    margin: 10px;
+    font-weight: bold;
+    margin: 1px;
     text-shadow: 
     0 1px 0px #378ab4, 1px 0 0px #5dabcd,
     1px 2px 1px #378ab4, 2px 1px 1px #5dabcd,
@@ -26,8 +35,28 @@ const GameStatus = styled.div`
     7px 8px 0px #378ab4, 8px 7px 0px #5dabcd,
     2px 5px 5px #ce5937;
 `;
-const GameHistory = styled.ol`
-    padding: 50px;
+const GameHistory = styled.div`
+    margin: 20px;
+    padding: 0 80px 75px;
+    color: #e3e3e3;
+    font-size: 1rem;
+`;
+const HistoryButton = styled.button`
+    font-size: 16px;
+    line-height: 16px;
+    padding: 6px;
+    border-radius: 10px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    box-shadow: #378ab4 2px 5px 15px 5px;
+    border: 2px solid #1c6ea4;
+
+    &:hover {
+        background: #99ddff;
+    }
+    &:active {
+        background: #ce5937;
+    }
 `;
 
 export class App extends Component {
@@ -76,9 +105,9 @@ export class App extends Component {
                 'Go to move #' + move:
                 'Go to game start';
             return (
-                <li key={move}>
-                    <button onClick={() => this.jumpTo(move)}>{desc}</button>
-                </li>
+                <div key={move}>
+                    <HistoryButton onClick={() => this.jumpTo(move)}>{desc}</HistoryButton>
+                </div>
             );
         });
 
@@ -92,15 +121,17 @@ export class App extends Component {
         return (
             <GameApp>
                 <AppHeader />
-                <div className="game-board">
+                <GameBoard>
                    <Board 
                         squares={current.squares}
                         onClick={(i) => this.handleClick(i)}
                    />
-                </div>
+                </GameBoard>
                 <GameInfo>
                     <GameStatus>{status }</GameStatus>
-                    <GameHistory>{moves}</GameHistory>
+                    <GameHistory>
+                        Press to jump in time: {moves}
+                    </GameHistory>
                 </GameInfo>
             </GameApp>
         )
