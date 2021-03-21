@@ -7,25 +7,28 @@ const Header = styled.header`
     background: -moz-linear-gradient(left, #3057a4 0%, #2388cb 49%, #3057a4 100%);
     background: -webkit-linear-gradient(left, #3057a4 0%, #2388cb 49%, #3057a4 100%);
     background: linear-gradient(to right, #3057a4 0%, #2388cb 49%, #3057a4 100%);
-    min-height:10vh;
+    min-height: 10vh;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align items: center;
+    justify-content: flex-start;
+    align-items: center;
 `;
 
 const Logo = styled.img`
-    height: 6rem;
+    height: 4rem;
     pointer-events: none;
-    margin: 30px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 5px #ffffff;
 `;
 
 const AppTitle = styled.h1`
     text-shadow: 1px 2px 2px #ffffff;
     color: #19004d;
-    font-size: 5rem;
-    line-height: 4rem;
+    font-size: 3rem;
+    line-height: 8rem;
     fold-weight: bold;
     min-width: 300px;
 `;
@@ -36,7 +39,6 @@ export default class AppHeader extends Component {
             <Header>
                 <Logo src={logo} alt="Logo" />
                 <AppTitle>Tic-Tac-Toe</AppTitle>
-                <Logo src={logo} alt="Logo" />
             </Header>
         )
     }

@@ -12,12 +12,12 @@ const GameBoard = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 20px;
+    padding: 0;
     min-height: 30vh;
     width: 100%;
 `;
 const GameInfo = styled.div`
-    margin: 5px;
+    margin: 2px;
 `;
 const GameStatus = styled.div`
     color: #19004d;
