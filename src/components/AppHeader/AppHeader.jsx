@@ -11,7 +11,7 @@ const Header = styled.header`
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 `;
 
@@ -22,6 +22,15 @@ const Logo = styled.img`
     background: #fff;
     border-radius: 10px;
     box-shadow: 5px 5px 15px 5px #ffffff;
+`;
+const LogoRight = styled.img`
+    height: 4rem;
+    pointer-events: none;
+    margin: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 5px #ffffff;
+    transform: scaleX(-1);
 `;
 
 const AppTitle = styled.h1`
@@ -39,6 +48,7 @@ export default class AppHeader extends Component {
             <Header>
                 <Logo src={logo} alt="Logo" />
                 <AppTitle>Tic-Tac-Toe</AppTitle>
+                <LogoRight src={logo} alt="Logo" />
             </Header>
         )
     }
