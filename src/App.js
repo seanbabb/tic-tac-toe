@@ -3,6 +3,7 @@ import Board from './components/Board/Board';
 import AppHeader from'./components/AppHeader/AppHeader';
 import styled from 'styled-components';
 import calculateWinner from './components/Helpers/Helpers';
+import Clock from './components/Clock/Clock';
 
 const GameApp = styled.div`
     text-align: center;
@@ -121,6 +122,7 @@ export class App extends Component {
         return (
             <GameApp>
                 <AppHeader />
+                <Clock />
                 <GameBoard>
                    <Board 
                         squares={current.squares}
